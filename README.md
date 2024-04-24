@@ -1,8 +1,8 @@
-# SystemVerilog Solutions for [Turing Complete]([Steam:](https://store.steampowered.com/app/1444480/Turing_Complete/))
+# SystemVerilog Solutions for [Turing Complete](https://store.steampowered.com/app/1444480/Turing_Complete/)
 
 (Work in Progress)
 
-This repo contains my SystemVerilog solutions of each level of the game [Turing Complete]([Steam:](https://store.steampowered.com/app/1444480/Turing_Complete/)), paired with testbenches.
+This repo contains my SystemVerilog solutions of each level of the game [Turing Complete](https://store.steampowered.com/app/1444480/Turing_Complete/), paired with testbenches.
 
 ## Overview
 
