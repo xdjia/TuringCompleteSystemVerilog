@@ -6,7 +6,7 @@ This repo contains my SystemVerilog solutions of each level of the game [Turing 
 
 ## Overview
 
-[Turing Complete]([Steam:](https://store.steampowered.com/app/1444480/Turing_Complete/)) challenges the player to build an ASIC with only wires and NAND gates[^1]. ASIC here means a combination of ALU, memory, PC counter, register files, and instruction set, which together makes a machine that is Turing complete. 
+[Turing Complete]([Steam:](https://store.steampowered.com/app/1444480/Turing_Complete/)) challenges the player to build an ASIC with only wires and NAND gates[^1]. ASIC here means a combination of ALU, memory, PC counter, register files, and instruction set, which together form a machine that is Turing complete. 
 
 [^1]: The same thing can also be done with only wires and NOR gates. Technically, the game also assumes a tristate buffer (a BIT SWITCH), which cannot be implemented by NAND or NOR because of the high impedence.
 
