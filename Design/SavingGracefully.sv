@@ -1,9 +1,15 @@
-// Basically a register.
+// Add an enable signal to a D Flip-Flop.
 
 module SavingGracefully (
-    input logic clk, save, value,
-    output logic outputs
+    input  logic clk,
+    input  logic enable,
+    input  logic data_in,
+    output logic data_out
 );
-    
-    DelayedLines register ()
+
+  always_ff @(posedge clk) begin
+    if (enable)
+        data_out <= data_in;
+  end
+
 endmodule

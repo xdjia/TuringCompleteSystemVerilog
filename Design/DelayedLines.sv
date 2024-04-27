@@ -1,27 +1,25 @@
-// Delay the input for 1 clock.
-// Basically a register.
+// Delay the input for 1 tick.
+// 
+// Our understanding is that this is a D Flip-Flop.
+// An example input rises at 1 time unit after the last clock rising edge,
+// and falls at 1 time unit after this clock rising edge. The output, 
+// assume it is initially low, rises at this clock rising edge, and falls 
+// at the next clock rising edge.
+// In this way, the input is dealyed by one tick.
+// 
+// Input :  ┌────┐
+// Output:      ┌────┐
 
-module delay_module (
-    input logic clk,          // Clock signal
-    input logic rst_n,        // Asynchronous reset, active low
-    input logic data_in,      // Input data
-    output logic data_out     // Output data delayed by 1 clock cycle
+module DelayedLine #(
+    DATA_WIDTH = 1
+) (
+    input logic clk;
+    input  logic [DATA_WIDTH-1:0] data_in,
+    output logic [DATA_WIDTH-1:0] data_out
 );
-
-  // Register to hold the data for one clock cycle
-  logic data_reg;
-
-  always_ff @(posedge clk or negedge rst_n) begin
-      if (!rst_n) begin
-          // Reset the register to a known state, e.g., 0
-          data_reg = 0;
-      end else begin
-          // On every rising edge of the clock, capture the input in the register
-          data_reg = data_in;
-      end
+  
+  always_ff @(posedge clk) begin
+    data_out <= data_in;
   end
-
-  // Assign the registered value to the output
-  assign data_out = data_reg;
 
 endmodule
