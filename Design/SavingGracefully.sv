@@ -8,8 +8,7 @@ module SavingGracefully (
 );
 
   always_ff @(posedge clk) begin
-    if (enable)
-        data_out <= data_in;
+    if (enable) data_out <= data_in;
   end
 
 endmodule
